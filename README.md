@@ -7,7 +7,7 @@
 
 Leveraging LLM to summarize clauses from legal documents.
 
-![preview](static/images/overview.png)
+![preview](static/images/overview.jpg)
 
 
 ## Getting started
