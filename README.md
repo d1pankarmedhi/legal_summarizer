@@ -1,11 +1,9 @@
 # Legal Summarizer 
 
-![OpenAI](https://img.shields.io/badge/Openai-74aa9c?style=for-the-badge&logo=openai&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
-
+![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) 
 ![python](https://img.shields.io/badge/Python-3.10-3776AB.svg?style=flat&logo=python&logoColor=white) ![Streamlit](https://img.shields.io/badge/Streamlit-1.27.2-FF4B4B.svg?style=flat&logo=Streamlit&logoColor=white)
 
-
-Leveraging LLM to summarize clauses from legal documents.
+Summarize contracts and legal documents leveraging Information Retrieval and context Augmentation using Large Language Models.
 
 ![overview](https://github.com/d1pankarmedhi/legal_summarizer/assets/136924835/c37e6dcd-f560-446c-a50b-dd166bce46a6)
 ---
