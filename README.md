@@ -7,8 +7,7 @@
 
 Leveraging LLM to summarize clauses from legal documents.
 
-![overview](image/overview.jpg)
-
+![overview](https://github.com/d1pankarmedhi/legal_summarizer/assets/136924835/c37e6dcd-f560-446c-a50b-dd166bce46a6)
 ---
 
 
