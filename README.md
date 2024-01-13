@@ -1,11 +1,22 @@
-# Legal Summarizer 
+# Legal Summarizer
 
 ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) 
 ![Python](https://img.shields.io/badge/Python-3.10-3776AB.svg?style=flat&logo=python&logoColor=white) ![Streamlit](https://img.shields.io/badge/Streamlit-1.27.2-FF4B4B.svg?style=flat&logo=Streamlit&logoColor=white)
 
 Summarize contracts and legal documents leveraging Information Retrieval and context Augmentation using Large Language Models.
 
-![overview](https://github.com/d1pankarmedhi/legal_summarizer/assets/136924835/c37e6dcd-f560-446c-a50b-dd166bce46a6)
+<div align="center">
+  <img src="https://github.com/d1pankarmedhi/legal_summarizer/assets/136924835/4968735b-b3a8-4633-8edd-6b8bed7ba558"/>
+  <p>Fig: Highlevel design/architecture diagram</p>
+</div>
+
+---
+
+<div align="center">
+  <img src="https://github.com/d1pankarmedhi/legal_summarizer/assets/136924835/c37e6dcd-f560-446c-a50b-dd166bce46a6"/>
+  <p>Fig: Project demo</p>
+</div>
+
 ---
 
 
