@@ -7,65 +7,6 @@ from vectorstore.weaviate_store import WeaviateStore
 
 
 
-
-def summary(query: str, chain, vectorstore):
-    output = ""
-    context = []
-    for document in vectorstore.similarity_search(query):
-        context.append(document.page_content)
-    s = chain.run({"context": context, "query": query})
-    res = re.sub(r"<.*?>", "", s)
-    res = res.replace("\n", " ")
-
-    not_found = re.findall(r"Clause Not Found", res)
-    if not_found:
-        output = not_found[0]
-    else:
-        output = res
-
-    code_pattern_match = re.search(r"^(.*?)```", res)
-    if code_pattern_match:
-        output = code_pattern_match.group(1)
-
-    quote_pattern_match = re.search(r'^(.*?)"""', output)
-    if quote_pattern_match:
-        output = quote_pattern_match.group(1)
-
-    single_quote_pattern_match = re.search(r"^(.*?)'''", output)
-    if single_quote_pattern_match:
-        output = single_quote_pattern_match.group(1)
-
-    return output
-
-
-def summarize(relevant_documents: list, query: str, chain, class_name):
-    output = ""
-
-    s = chain.run({"context": relevant_documents, "clause": query})
-    res = re.sub(r"<.*?>", "", s)
-    res = res.replace("\n", " ")
-
-    not_found = re.findall(r"Clause Not Found", res)
-    if not_found:
-        output = not_found[0]
-    else:
-        output = res
-
-    code_pattern_match = re.search(r"^(.*?)```", res)
-    if code_pattern_match:
-        output = code_pattern_match.group(1)
-
-    quote_pattern_match = re.search(r'^(.*?)"""', output)
-    if quote_pattern_match:
-        output = quote_pattern_match.group(1)
-
-    single_quote_pattern_match = re.search(r"^(.*?)'''", output)
-    if single_quote_pattern_match:
-        output = single_quote_pattern_match.group(1)
-
-    return output
-
-
 def main():
     st.set_page_config(page_title="ClauseSense", layout="wide", page_icon="♦")
     st.markdown(
@@ -113,7 +54,7 @@ def main():
                 )
                 print(relevant_documents)
                 v.append(
-                    summarize(
+                    llm.summarize(
                         relevant_documents=relevant_documents,
                         query=k,
                         chain=llm_chain,

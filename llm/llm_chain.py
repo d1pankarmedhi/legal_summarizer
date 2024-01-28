@@ -1,3 +1,5 @@
+import re 
+
 from langchain.llms import AzureOpenAI, OpenAI
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import LLMChain
@@ -36,6 +38,35 @@ class LLM:
         )
         chain = LLMChain(llm=self.llm, prompt=prompt)
         return chain
+    
+
+
+    def summarize(self, relevant_documents: list, query: str, chain, class_name):
+        output = ""
+
+        s = chain.run({"context": relevant_documents, "clause": query})
+        res = re.sub(r"<.*?>", "", s)
+        res = res.replace("\n", " ")
+
+        not_found = re.findall(r"Clause Not Found", res)
+        if not_found:
+            output = not_found[0]
+        else:
+            output = res
+
+        code_pattern_match = re.search(r"^(.*?)```", res)
+        if code_pattern_match:
+            output = code_pattern_match.group(1)
+
+        quote_pattern_match = re.search(r'^(.*?)"""', output)
+        if quote_pattern_match:
+            output = quote_pattern_match.group(1)
+
+        single_quote_pattern_match = re.search(r"^(.*?)'''", output)
+        if single_quote_pattern_match:
+            output = single_quote_pattern_match.group(1)
+
+        return output
     
 
 
