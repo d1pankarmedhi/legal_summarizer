@@ -12,13 +12,6 @@ Summarize contracts and legal documents leveraging Information Retrieval and con
 
 ---
 
-<div align="center">
-  <img src="https://github.com/d1pankarmedhi/legal_summarizer/assets/136924835/c37e6dcd-f560-446c-a50b-dd166bce46a6"/>
-  <p>Fig: Project demo</p>
-</div>
-
----
-
 
 - [Legal Summarizer](#legal-summarizer)
   - [:yawning\_face: Hard to understand contract agreements](#yawning_face-hard-to-understand-contract-agreements)
