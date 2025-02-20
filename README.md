@@ -42,13 +42,16 @@ With the advancements in **Large Language Models (LLMs)**, we can now:
 ### **🔍 Retrieval-Augmented Generation (RAG)**  
 **RAG** enhances the summarization process by first searching for relevant content and then reconstructing it using an LLM.
 
-🔹 **Step 1: Document Retrieval**  
+**Step 1: Document Processing**
+- Processing complex agreements, contracts and other legal documents, extracting information using OCR, transformers, etc and chunking, and tagging them with relevant topics for efficient keyword search. 
+
+**Step 2: Document Retrieval**  
 - Uses **BM25 ranking** (keyword-based) or **Semantic Search** (context-based) to fetch relevant parts of legal documents.  
 
-🔹 **Step 2: Context Augmentation**  
+**Step 3: Context Augmentation**  
 - The retrieved text is then passed to an **LLM** to generate a structured and readable summary.  
 
-### **📚 Learn More About RAG**  
+Learn More About RAG
 🔗 [Exploring the Power of RAG & OpenAI’s Function Calling for Q&A](https://dipankarmedh1.medium.com/exploring-the-power-of-rag-and-openais-function-calling-for-question-answering-d512c45c56b5)  
 
 ---
